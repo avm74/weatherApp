@@ -1,0 +1,11 @@
+<h2>Mostrando tiempo en {{localidad}} ({{respuesta.location.region}})</h2>
+<img src="{{respuesta.current.condition.icon}}">
+
+<div id="detalle">
+    <div id="dias" *ngFor="let dia of dias">
+        <p>Fecha: {{dia.date}}</p>
+        <p>Temperatura máxima: {{dia.day.maxtemp_c}}ºC</p>
+        <p>Temperatura mínima: {{dia.day.mintemp_c}}ºC</p>
+    </div>
+</div>
+

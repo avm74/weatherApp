@@ -1,0 +1,21 @@
+<h1>Introduce una localización</h1>
+<input type="text" id="localidad" (keydown.enter)="enviarParametros(localidad)" [(ngModel)]="localidad">
+<button type="button" (click)="enviarParametros(localidad)">Buscar</button>
+
+<div id="loader" *ngIf="mostrarLoader">
+<svg
+  class="ring"
+  viewBox="25 25 50 50"
+  stroke-width="5"
+>
+  <circle cx="50" cy="50" r="20" />
+</svg>
+</div>
+
+<div id="detalleTiempo">
+    <div *ngIf="mostrarDetalle">
+        <app-detalles-tiempo></app-detalles-tiempo>
+    </div>
+</div>
+
+
